@@ -8,12 +8,6 @@ import DayList from 'components/DayList';
 import Appointment from 'components/Appointment';
 import getAppointmentsForDay from 'helpers/selectors';
 
-// const days = [];
-
-const appointments = [
-  
-];
-
 export default function Application(props) {  
 
   const [state, setState] = useState({ 

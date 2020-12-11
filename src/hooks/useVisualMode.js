@@ -7,7 +7,7 @@ export default function useVisualMode(initial) {
 
   const transition = (newMode, replace = false) => {
 
-    const newHistory = [...history]
+    const newHistory = [...history] // create fresh copy of history
 
     if (replace) {
       newHistory.pop()

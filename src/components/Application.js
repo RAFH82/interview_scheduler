@@ -7,8 +7,7 @@ import 'components/Application.scss';
 import DayList from 'components/DayList';
 import Appointment from 'components/Appointment';
 
-import { getAppointmentsForDay } from 'helpers/selectors';
-import { getInterview } from 'helpers/selectors';
+import { getAppointmentsForDay, getInterview, getInterviewersForDay } from 'helpers/selectors';
 
 export default function Application(props) {  
 
@@ -46,12 +45,15 @@ export default function Application(props) {
 
     const interview = getInterview(state, appointment.interview);
 
+    const interviewers = getInterviewersForDay(state, state.day);
+
 		return (
 			<Appointment
 			key={appointment.id}
       id={appointment.id}
       time={appointment.time}
       interview={interview}
+      interviwers={interviewers}
 			/>
 		);
 	})

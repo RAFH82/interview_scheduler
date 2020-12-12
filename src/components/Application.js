@@ -37,52 +37,53 @@ export default function Application(props) {
     })
   },[])
 
+  function bookInterview(id, interview) {
+      
+    const appointment = {
+      ...state.appointments[id],
+      interview: {...interview}
+    };
+
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+
+    return axios.put(`/api/appointments/${id}`, appointment)
+    .then(res => {
+      setState({...state, appointments});
+    })
+  }
+
+  function cancelInterview(id) {
+
+    const appointment = {
+      ...state.appointments[id],
+      interview: null
+    };
+
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+
+    return axios.delete(`/api/appointments/${id}`)
+    .then(res => {
+      setState({...state, appointments});
+    })
+
+  }
+
   const setDay = day => setState({ ...state, day });
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
+
 
 	const appsList = dailyAppointments.map( appointment => {
 
     const interview = getInterview(state, appointment.interview);
 
     const interviewers = getInterviewersForDay(state, state.day);
-
-    function bookInterview(id, interview) {
-      
-      const appointment = {
-        ...state.appointments[id],
-        interview: {...interview}
-      };
-
-      const appointments = {
-        ...state.appointments,
-        [id]: appointment
-      };
-
-      return axios.put(`/api/appointments/${id}`, appointment)
-      .then(res => {
-        setState({...state, appointments});
-      })
-    }
-
-    function cancelInterview(id) {
-
-      const appointment = {
-        ...state.appointments[id],
-        interview: null
-      };
-
-      const appointments = {
-        ...state.appointments,
-        [id]: appointment
-      };
-
-      return axios.delete(`/api/appointments/${id}`)
-      .then(res => {
-        setState({...state, appointments});
-      })
-
-    }
 
 		return (
 			<Appointment

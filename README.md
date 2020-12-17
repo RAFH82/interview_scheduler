@@ -1,8 +1,21 @@
 # Interview Scheduler
 
-Welcome to my Interview Scheduler App! Feel free to create/edit/delete interviews as you chooose!
+Welcome to my Interview Scheduler App! This single page React app allows you to book an interview with a LHL mentor!
 
 https://silly-turing-5bcf72.netlify.app/
+
+STACK:
+
+-React
+-PostgreSQL
+-Javascript
+
+- Axios
+- Jest
+- Cypress
+- Storybook
+
+STACK:
 
 ## Setup
 

@@ -23,3 +23,7 @@ npm test
 ```sh
 npm run storybook
 ```
+
+![Main](https://github.com/RAFH82/interview_scheduler/blob/master/docs/Main-page.png?raw=true)
+![Selecting Interview](https://github.com/RAFH82/interview_scheduler/blob/master/docs/Selecting-interview.png?raw=true)
+![Editing Interview](https://github.com/RAFH82/interview_scheduler/blob/master/docs/Editing-interview.png?raw=true)

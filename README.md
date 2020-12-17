@@ -1,5 +1,7 @@
 # Interview Scheduler
 
+Welcome to my Interview Scheduler App! Feel free to create/edit/delete interviews as you chooose!
+
 ## Setup
 
 Install dependencies with `npm install`.

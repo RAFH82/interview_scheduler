@@ -32,6 +32,7 @@
 		]
 	},
 	"devDependencies": {
+		"immer": ">=8.0.1",
 		"@babel/core": "^7.4.3",
 		"@storybook/addon-actions": "^5.0.10",
 		"@storybook/addon-backgrounds": "^5.0.10",
